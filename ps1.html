@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Problem Set 1: Karel</title>
+		<style>
+		.page {
+			width: 9in ;
+			height: 11.5in;
+			margin: auto ;
+		}
+		.page_outer {
+			width: 8.5in;
+			height: 11in;
+			box-shadow: -.1in -.1in .25in darkgray, .1in .1in .25in gray;
+			position: relative ;
+		}
+		.page_inner{
+			margin: 1in;  
+			margin-top: .5in;  
+		}
+		th {
+			text-align: left ;
+		}
+		</style>
+		<style type="text/css" media="print">
+			.page {
+				width: 8.5in;
+				height: 11in;
+				margin: auto ;
+			}
+			.page_outer {
+				box-shadow: none;
+			}
+			a {
+				color: black;
+				text-decoration-line: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page">
+			<div style="height:.25in;"> <!-- Vertical space adjuster for box shadow --></div>
+			<div class="page_outer">
+				<div style="height:.25in;"> <!-- Vertical space adjuster for box shadow --></div>
+				<div class="page_inner"><center>
+					<h4>CS 151: Intro to Programming in Python</h4>
+					<h1>Problem Set 1: Karel</h1>
+                    <h3>Due: Monday, 8 September, 11:59 PM</h3>
+                    <hr>
+                    </center>
+					<p>This is a problem set of two problems, each of which has template files within which you will complete your work. Retrieve the assignment from the link below, download the ZIP (.zip) file, then extract all files. I would highly suggest then keeping the entire folder open in explorer/finder, to best edit the different files.<p>When you are finished, upload your completed templates back to Github, either via Github's "upload files" option or by using the "copy" and "paste" commands with Github's online file editor. Don’t change file names or add or remove files: overwrite the original template files.
+					<hr>
+                    <h2>Files:</h2>
+					<h3>1. Karel Newspaper</h3>
+					<p>Relevant files:
+                    <ul>
+                        <li>Update (only) this file:
+                        <ul>
+                            <li>Karel_Newspaper.py</li>
+                        </ul>
+                        <li>You will need to have these files in the same folder/directory:
+                        <ul>
+                            <li>karel.py</li>
+                            <li>Karel_Newspaper.w</li>
+                        </ul>
+                    </ul>
+					<h3>2. Karel Painting</h3>
+					<p>Relevant files:
+                    <ul>
+                        <li>Update (only) this file:
+                        <ul>
+                            <li>Karel_Painting.py</li>
+                        </ul>
+                        <li>You will need to have these files in the same folder/directory:
+                        <ul>
+                            <li>karel.py</li>
+                            <li>Karel_Painting.w</li>
+                            <li>Painting1.w</li>
+                            <li>Painting2.w</li>
+                            <li>Painting3.w</li>
+                        </ul>
+                    </ul>
+                    <p>You may wish to make note of the cases - all words are capitalized except the special "karel.py" Python file, which is lower-case.
+				</div>
+			</div>
+		</div>
+		<div class="page">
+			<div style="height:.25in;"> <!-- Vertical space adjuster for box shadow --></div>
+			<div class="page_outer">
+				<div style="height:.25in;"> <!-- Vertical space adjuster for box shadow --></div>
+				<div class="page_inner">
+                    <h2>Problems:</h2>
+                    <h3>Problem 1: Karel Newspaper</h3>
+					<p>We imagine Karel:
+                    <ol>
+                        <li>Begins within the upper-left/northwest of a "house", a 3x3 enclosure of walls with a single opening on the center-right/east,
+                        <li>Wishes to retrieve a "newspaper", a beeper immediately outside the sole opening, and
+                        <li>Wishes to return to the starting point in the upper-left/northwest.
+                    </ol>
+                    <center><img width="70%" src="https://cd-public.github.io/courses/old/cs1f24/hws/imgs/ps1_1.png"></center>
+                    <p>You do not need to use conditional 'if' statements or 'while' loops for this task, but you are welcome to do so.
+                    <p>You are not-quite-required to use more than one function (that is, more functions than just the required 'main' function) for this task. You are encouraged to use a function for at least two of the three steps.
+                    <h4>How I solved the Problem</h4>
+                    <p>My solution contained around 60 lines of Python (.py) including comments. I utilized the four functions provided in the template - main() and three optional functions. I used no 'if', 'while', or 'for' statements or loops. I expect using 'for' would reduced my lines-of-code by around 5, to around 50. My longest function was "return_to_start" at around 15 lines.
+                    <p>I did <em>not</em> successfully complete the task on my first attempt, confusing left and right in one case, and moving too many steps and colliding with a wall in another.
+                </div>
+			</div>
+		</div>
+		<div class="page">
+			<div style="height:.25in;"> <!-- Vertical space adjuster for box shadow --></div>
+			<div class="page_outer">
+				<div style="height:.25in;"> <!-- Vertical space adjuster for box shadow --></div>
+				<div class="page_inner">
+					<h2>Problems, Cont.:</h2>
+                    <h3>Problem 2: Karel Painting</h3>
+					<p>We imagine Karel:
+                    <ol>
+                        <li>Begins above the top right of a "house"
+                        <ul>
+                            <li>For this problem, we regard a "house" as a rectangular (4-sided) enclosure of walls with a single opening somwhere on the right, but which may be of any size.
+                            <li>For this problem, Karel may initially face in any direction.
+                        </ul>
+                        <li>Wishes to "paint" the "house" by placing a beeper immediately outside every the top/north, left/west, and bottom/south wall of the "house", and
+                        <li>Wishes to enter through the opening on the right/east.
+                    </ol>
+                    <center><img width="100%" src="https://cd-public.github.io/courses/old/cs1f24/hws/imgs/ps1_2.png"></center>
+                    <p>The core learning objective of this problem requires you to write one Python (.py) file which may successful paint all four world (.w) files, despite differences in the "houses". You will need to use conditional 'if' statements or 'while' loops for this task, and are encouraged to use functions. My solution did not use a 'for' loop, but I thought there was one obviously place it could have.
+                    <p>There will always be at least two grid spaces between the "house" and the boundary of the grid.
+                    <p>There will always be an opening/door but it will not always be centered within the right/east wall.
+				</div>
+			</div>
+		</div>
+		<div class="page">
+			<div style="height:.25in;"> <!-- Vertical space adjuster for box shadow --></div>
+			<div class="page_outer">
+				<div style="height:.25in;"> <!-- Vertical space adjuster for box shadow --></div>
+				<div class="page_inner">
+                    <h4>How I solved the Problem</h4>
+                    <p>My solution used four "while" loops, one for each of the three steps numbered above. For one of the tasks, I used one inner while loop placed inside an outer while loop. In every case, having each while loop contained within it's own function made the most sense to me, so in one case I had a function, which contained a while loop, which contained a function, which contained a while loop.
+                    <p>In my code, I see one clear place I could have used a 'for' loop instead of a while loop.
+                    <p>I used no 'if' statements.
+                    <p>Almost all of my movement and placement occurred within loops.
+                    <p>I did <em>not</em> successfully complete the task on my first attempt, as I did not realize Karel could start facing in any direction because I did not read the directions completely before testing my code. My code did work after fixing this single error, but I was quite surprised when it worked.
+					<hr>
+					<h4>Hints Provided by Prof. Jed Rembold</h4>
+                    <p>In addition to the notes on how I solved this problem, here are some hints provided by Prof. Jed Rembold, who designed this assignment. I used all three of these hints:
+					<ul>
+                        <li>Really think of how you want to decompose this problem. I would argue that you are essentially trying to accomplish the same task 3 different times, so that might guide or inspire how you want to break things down.
+                        <li>Just because loops will be useful, you don’t need to have all your code inside the loop! Frequently, you might need a line or two of code outside any loops to “reposition” Karel a bit.
+                        <li>You have lots of potential predicate functions (functions used within "while" loops or "if" statements) to choose from to determine where the wall is that you are trying to paint and move along. Many of them can work, but some streamline the code more than others.
+                    </ul>
+					<hr>
+					<h4>Final Checks</h4>
+					<ul>
+                        <li>Make sure you have practiced decomposition in both problems: breaking the overall problem up into smaller problems and using helper functions to group up the commands to solve that smaller problem.
+                        <li>Make sure you have used comments to document your code. At the very least, you should have a comment explaining what each helper function is doing.
+                        <li>Make sure you have filled out the meta-data at the top of the template, in particular indicating if you worked with anyone or used an online resources. This is so I can support you better!
+                    </ul>
+				</div>
+			</div>
+		</div>
+       <div class="page">
+           <div style="height:.25in;"> <!-- Vertical space adjuster for box shadow --></div>
+                <div class="page_outer">
+                    <div style="height:.25in;"> <!-- Vertical space adjuster for box shadow --></div>
+                    <div class="page_inner">
+                    <p>It may be non-obvious how to change world (.w) files. Here is an animated demonstration. Notice the slight delay between selecting files and the Karel window updating:
+					<hr>
+                    <center><img src="https://cd-public.github.io/courses/old/cs1f24/hws/imgs/ps1_3.gif"></center>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
