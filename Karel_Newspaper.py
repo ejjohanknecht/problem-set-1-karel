@@ -19,6 +19,7 @@ def main():
 
 
 def creep_along_left_wall():
+# this gets karel to the door but not yet outside
     while left_is_blocked():
         if front_is_clear():
             move()
@@ -26,6 +27,7 @@ def creep_along_left_wall():
             turn_right()
 
 def brave_the_outdoors():
+# this doesn't really need to be a function, i just wanted to have fun :)
     turn_left()
     move()
 
@@ -36,12 +38,15 @@ def turn_right():
     for i in range(3):
         turn_left()
 
-
 def yippee():
+# it's only right that karel can celebrate
     for i in range(6):
         turn_left()
 
 def go_home():
+# i tried to get her to "creep_along_right_wall" by mirroring 
+# the "creep_along_left_wall" function, but i didn't know how to 
+# get karel to stop running laps of their house
     move()
     turn_right()
     move()
