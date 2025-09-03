@@ -17,7 +17,6 @@ def main():
     go_home()
     yippee()
 
-
 def creep_along_left_wall():
 # this gets karel to the door but not yet outside
     while left_is_blocked():
