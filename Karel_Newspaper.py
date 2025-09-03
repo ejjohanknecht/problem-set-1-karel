@@ -1,37 +1,50 @@
 #========================================================
 # Filename: Karel_Newspaper.py
 # 
-# Your name:
+# Your name: Ella Johanknecht
 # Who did you work with (if anyone)?:
 # If you consulted AI, link to transcript:
-# Estimate for time spent on this problem (in hrs)?:
+# Estimate for time spent on this problem (in hrs)?: 0.5
 #========================================================
-
-# I've just laid out a basic starting function below. 
-# While this problem is fairly simple, you should still practice
-# the good habit of writing helper functions to decompose the problem
-# into smaller pieces. I have provided you with a template for the
-# main function and then 3 helping functions as outlined in the PDF
 
 import karel
 
-
 def main():
-    """ Function to cause Karel to retrieve the newspaper. """
-    # You can add your sequence of commands below here!
-    # Remember you can use the defined helper functions!
+    creep_along_left_wall()
+    brave_the_outdoors()
+    yoink()
+    yippee()
+    go_home()
+    yippee()
 
 
-def move_to_newspaper():
-    """ Helping function to move Karel to the newspaper location. """
+def creep_along_left_wall():
+    while left_is_blocked():
+        if front_is_clear():
+            move()
+        if front_is_blocked():
+            turn_right()
+
+def brave_the_outdoors():
+    turn_left()
+    move()
+
+def yoink():
+    pick_beeper()
+
+def turn_right():
+    for i in range(3):
+        turn_left()
 
 
+def yippee():
+    for i in range(6):
+        turn_left()
 
-def pick_up_paper():
-    """ Helping function to have Karel pick up the newspaper. """
-    # Yes, this will probably be VERY simple and short
-
-
-
-def return_to_start():
-    """ Helping function to move Karel back to its starting position. """
+def go_home():
+    move()
+    turn_right()
+    move()
+    turn_left()
+    for i in range(2):
+        move()
